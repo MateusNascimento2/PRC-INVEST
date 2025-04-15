@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import "tailwindcss";
+
+.animate-from-top-left {
+  animation: from-top-left 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-from-bottom-right {
+  animation: from-bottom-right 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.fade-out {
+  animation: fade-out 0.6s ease-in forwards;
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-lekton: "Lekton", sans-serif;
+
+  @keyframes from-top-left {
+    0% {
+      opacity: 0;
+      transform: translate(-200%, -200%) scale(0.8);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+  }
+
+  @keyframes from-bottom-right {
+    0% {
+      opacity: 0;
+      transform: translate(200%, 200%) scale(0.8);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+
+
+}
