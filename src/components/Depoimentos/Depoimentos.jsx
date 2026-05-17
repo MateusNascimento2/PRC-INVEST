@@ -82,7 +82,7 @@ export default function Depoimentos() {
                   <img src={setaAmarela} alt="" />
                 </figure>
 
-                <blockquote className="font-roboto text-sm/6 tracking-wide text-balance lg:h-[200px]">
+                <blockquote className="font-roboto text-sm/6 tracking-wide text-balance lg:h-[200px] overflow-auto">
                   “{review.comentario}”
                 </blockquote>
 

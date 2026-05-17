@@ -88,11 +88,11 @@ export default function Slider() {
           <img
             src={mainImage}
             alt={mainImage === man ? "Homem representando o cliente da PRC Invest" : "Mulher representando o cliente da PRC Invest"}
-            className={`w-[350px] h-[560px] lg:w-[400px] lg:h-[650px] 2xl:w-[470px] 2xl:h-[740px] ${animating ? 'fade-out' : 'fade-in'} transition-all duration-800 ease-out`}
+            className={`w-[clamp(350px,28vw,600px)] h-[clamp(520px,68dvh,900px)] lg:w-[clamp(400px,30vw,680px)] lg:h-[clamp(630px,72dvh,980px)] 2xl:w-[clamp(470px,32vw,780px)] 2xl:h-[clamp(720px,76dvh,1100px)] ${animating ? 'fade-out' : 'fade-in'} transition-all duration-800 ease-out object-contain object-bottom`}
           />
         </figure>
 
-        <article className={mainImage === man ? 'absolute top-[60%] left-[3%] lg:relative' : 'absolute top-[60%] left-[3%] lg:relative lg:mb-[380px]'}>
+        <article className={mainImage === man ? 'absolute top-[60%] left-[3%] lg:relative' : 'absolute top-[60%] left-[3%] lg:relative lg:mb-[150px]'}>
           <picture>
             <img
               src={quadroBranco}
